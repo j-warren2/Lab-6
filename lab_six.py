@@ -1,6 +1,6 @@
 import sys
 
-
+# Function to encode password
 def encoder(password):  # Jakayla Warren
     encoded = ''
     if len(password) == 8:
@@ -10,13 +10,13 @@ def encoder(password):  # Jakayla Warren
             if len(str(new_i)) == 1:
                 new_i = str(new_i)
                 encoded += new_i
-            else:
+            else: # In case of numbers that go from 1 digit to 2, i.e. 9 -> 12
                 new_i = str(new_i)
                 new_i = new_i[1:]
                 encoded += new_i
     return encoded
 
-
+# Menu
 def menu():
     print('')
     print('Menu')
@@ -30,7 +30,7 @@ def menu():
     print('3. Quit')
     print('')
 
-
+# Main program loop
 def main():
     menu()
     password = None
